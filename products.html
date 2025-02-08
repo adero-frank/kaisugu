@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+</head>
+
+<style>
+    /* General Styles */
+.products-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 40px;
+}
+
+.products-title {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.products-intro {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Product Cards */
+.product-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%;
+    }
+}
+
+</style>
+
+<body>
+
+       <!-- Header start -->
+<header>
+    <div class="navbar-logo">
+        <img src="images/logo-main1.png" alt="Kaisugu Logo">
+    </div>
+
+    <nav>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <!-- <li><a href="#team">Team</a></li> -->
+            <!-- <li><a href="#csr">CSR</a></li> -->
+            <!-- <li><a href="#gallery">Gallery</a></li> -->
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+</header>
+<!-- Header End -->
+
+
+     <!-- Products Start -->
+     <section class="products-section">
+        <h1 class="products-title">Our Products</h1>
+        <p class="products-intro">Tea has a complex positive effect on the body</p>
+
+        <div class="product-container">
+            <!-- Black Tea -->
+            <div class="product-item">
+                <div class="carousel">
+                    <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 1">
+                        <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 2">
+                        <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 3">
+                    </div>
+                    <button class="next" onclick="nextSlide(0)">&#10095;</button>
+                </div>
+                <h2 class="product-name">Black Tea</h2>
+                <p class="product-description">Preferred by connoisseurs as one of the finest blends of tea.</p>
+            </div>
+
+            <!-- Masala Tea -->
+            <div class="product-item">
+                <div class="carousel">
+                    <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="images/ChaiPoa50g.jpg" alt="Masala Tea Image 1">
+                        <img src="images/ChaiPoa50g.jpg" alt="Masala Tea Image 2">
+                        <img src="images/ChaiPoa50g.jpg" alt="Masala Tea Image 3">
+                    </div>
+                    <button class="next" onclick="nextSlide(1)">&#10095;</button>
+                </div>
+                <h2 class="product-name">Masala Tea</h2>
+                <p class="product-description">Masala Tea is a collaboration of fresh tea leaves blended with the finest spices.</p>
+            </div>
+
+                  <!-- Black Tea -->
+                  <div class="product-item">
+                    <div class="carousel">
+                        <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                        <div class="carousel-images">
+                            <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 1">
+                            <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 2">
+                            <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 3">
+                        </div>
+                        <button class="next" onclick="nextSlide(0)">&#10095;</button>
+                    </div>
+                    <h2 class="product-name">Black Tea</h2>
+                    <p class="product-description">Preferred by connoisseurs as one of the finest blends of tea.</p>
+                </div>
+
+                      <!-- Black Tea -->
+            <div class="product-item">
+                <div class="carousel">
+                    <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 1">
+                        <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 2">
+                        <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 3">
+                    </div>
+                    <button class="next" onclick="nextSlide(0)">&#10095;</button>
+                </div>
+                <h2 class="product-name">Black Tea</h2>
+                <p class="product-description">Preferred by connoisseurs as one of the finest blends of tea.</p>
+            </div>
+
+                  <!-- Black Tea -->
+                  <div class="product-item">
+                    <div class="carousel">
+                        <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                        <div class="carousel-images">
+                            <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 1">
+                            <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 2">
+                            <img src="images/ChaiPoa50g.jpg" alt="Black Tea Image 3">
+                        </div>
+                        <button class="next" onclick="nextSlide(0)">&#10095;</button>
+                    </div>
+                    <h2 class="product-name">Black Tea</h2>
+                    <p class="product-description">Preferred by connoisseurs as one of the finest blends of tea.</p>
+                </div>
+
+            <!-- Organic Tea -->
+            <div class="product-item">
+                <div class="carousel">
+                    <button class="prev" onclick="prevSlide(2)">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="images/ChaiPoa50g.jpg" alt="Organic Tea Image 1">
+                        <img src="images/ChaiPoa50g.jpg" alt="Organic Tea Image 2">
+                        <img src="images/ChaiPoa50g.jpg" alt="Organic Tea Image 3">
+                    </div>
+                    <button class="next" onclick="nextSlide(2)">&#10095;</button>
+                </div>
+                <h2 class="product-name">Organic Tea</h2>
+                <p class="product-description">Organic Tea straight from the Diver Mouth Finlay brings you this exquisite blend.</p>
+            </div>
+
+        </div>
+    </section>
+
+<!-- Products End -->
+
+     <!-- FOOTER START -->
+     <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo-main1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address</strong>:444 Kaisugi ltd</p>
+             <p><strong>Phone</strong>:+254 111 222 333</p>
+              <p><strong>Hour</strong>:10:00-18:00 mon-sat </p>
+              <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+              </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Informatio</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Card</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store Google Play</p>
+            <div class="row">
+                <img src="images/app.jpg" alt="">
+                <img src="images/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gateway</p>
+            <img src="images/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 KAISUGU LTD</p>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+
+    <script>
+      function toggleMenu() {
+    document.querySelector(".navbar-menu").classList.toggle("active");
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KAISUGU LIMITED</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+<style>
+    /* General Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Logo */
+.navbar-logo img {
+    height: 50px;
+}
+
+/* Navigation Links */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hamburger Icon (Hidden by Default) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-menu li {
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    /* Show menu when active */
+    .navbar-menu.active {
+        display: flex;
+    }
+}
+
+</style>
+
+<body>
+    <!-- Header start -->
+<header>
+    <div class="navbar-logo">
+        <img src="images/logo-main1.png" alt="Kaisugu Logo">
+    </div>
+
+    <nav>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <!-- <li><a href="#team">Team</a></li> -->
+            <!-- <li><a href="#csr">CSR</a></li> -->
+            <!-- <li><a href="#gallery">Gallery</a></li> -->
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+</header>
+<!-- Header End -->
+
+
+    <!-- Hero Carousel start -->
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super Value Deals</h2>
+        <h1>On All Products</h1>
+        <p>Save more with coupons & upto 70% off</p>
+        <button class="shop-now-btn"><a href="shop.html">Shop Now</a></button>
+    </section>
+    <!-- Hero Carousel end -->
+
+    <!-- ABOUT US START -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Kaisugu</h2>
+                <p>Established in 1928, Kaisugu Limited has grown to become a beacon of excellence in the tea industry.
+                    Nestled in the lush highlands of Kenya, we are committed to producing the finest tea while upholding
+                    the highest standards of quality and sustainability.</p>
+                <a href="#" class="cta-button">Learn More</a>
+            </div>
+            <div class="about-image">
+                <img src="images/image.png" alt="Kaisugu Tea Estate" class="hover-zoom">
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT US END -->
+
+    <!-- FEATURES -->
+    <!-- SECTION C -->
+    <section id="feature" class="section-p1">
+        <div class="fe-box">
+            <img src="images/f1.png" alt="">
+            <h6>Free Shipping</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/f2.png" alt="">
+            <h6>Online order</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/f3.png" alt="">
+            <h6>Save Money</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/f4.png" alt="">
+            <h6>Promotions</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/f5.png" alt="">
+            <h6>Happy Sales</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="images/f6.png" alt="">
+            <h6>F24/7 Support</h6>
+        </div>
+    </section>
+
+
+    <!-- OUR PRODUCTS START -->
+    <!-- Product Images Section -->
+    <section id="product-images" class="section">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/chai-poa-1.jpg" alt="Kaisugu Chai Poa">
+                <h3>Kaisugu Chai Poa</h3>
+                <p>We offer loose leaf tea foil packed in elegantly designed paper cartons, wooden boxes, paper
+                    canisters, metal tins and glass bottles.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="product-item">
+                <img src="images/classic-tea2-1.jpg" alt="Kaisugu Classic Tea">
+                <h3>Kaisugu Classic Tea</h3>
+                <p>Adding more value to some of the finest teas, we offer the regular string & tag, tag-less and
+                    envelope type tea bags both single and double chamber.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+            <div class="product-item">
+                <img src="images/classic-tangawizi.jpg" alt="Kaisugu Classic Tangawizi">
+                <h3>Kaisugu Classic Tangawizi</h3>
+                <p>Kaisugu Classic Tangawizi. We offer loose leaf teas in Bulk form. These products tea offering,
+                    all manufactured and processed.</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid Dark -->
+    <section class="product-grid-dark">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/ChaiPoa100g.jpg" alt="Chai Poa - 100g">
+                <p>Chai Poa - 100g</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/KaisuguClassicTea250g.jpg" alt="Classic Tea 250g">
+                <p>Classic Tea 250g</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/ChaiPoa50g.jpg" alt="Kaisugu Chai Poa 50g">
+                <p>Kaisugu Chai Poa 50g</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/TangawiziBlend.jpg" alt="Tangawizi Tea Blend">
+                <p>Tangawizi Tea Blend</p>
+            </div>
+        </div>
+    </section>
+     <!-- OUR PRODUCTS END -->
+
+
+    <!-- TEA QUALITY SECTION START -->
+    <section class="tea-quality-section">
+        <!-- First Section -->
+        <div class="tea-quality-card">
+          <h2 class="tea-quality-title">HIGHEST QUALITY</h2>
+          <p class="tea-quality-description">Our tea products fetch handsome rates due to their superior quality, compared with the other regions.</p>
+          <a href="#" class="tea-quality-read-more">Read more</a>
+        </div>
+    
+        <!-- Second Section -->
+        <div class="tea-quality-card">
+          <h2 class="tea-quality-title">FRIENDLY PRICES</h2>
+          <p class="tea-quality-description">With our eye keenly on production costs, we ensure reasonable rates for our esteemed clients.</p>
+          <a href="#" class="tea-quality-read-more">Read more</a>
+        </div>
+    
+        <!-- Third Section -->
+        <div class="tea-quality-card">
+          <h2 class="tea-quality-title">TRUSTED BRAND</h2>
+          <p class="tea-quality-description">Over the years we have built Kaisugu Tea, and with that a trusted name emerged. Loved and cherished.</p>
+          <a href="#" class="tea-quality-read-more">Read more</a>
+        </div>
+      </section>
+    <!-- TEA QUALITY SECTION END -->
+
+    <!-- NEWS LETTER START -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Signup For Newsletters</h4>
+            <p>Get email updates about our latest shop and <span>special offers</span> </p>
+        </div>
+
+        <div class="form">
+            <input type="email" name="" id="" placeholder="Enter Your email">
+            <button class="normal">Signup</button>
+        </div>
+    </section>
+     <!-- NEWS LETTER END -->
+     
+
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo-main1.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address</strong>:444 Kaisugi ltd</p>
+             <p><strong>Phone</strong>:+254 111 222 333</p>
+              <p><strong>Hour</strong>:10:00-18:00 mon-sat </p>
+              <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+              </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Informatio</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Card</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store Google Play</p>
+            <div class="row">
+                <img src="images/app.jpg" alt="">
+                <img src="images/play.jpg" alt="">
+            </div>
+            <p>Secure Payment Gateway</p>
+            <img src="images/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 KAISUGU LTD</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+    document.querySelector(".navbar-menu").classList.toggle("active");
+}
+
+    </script>
+</body>
+
+</html>
